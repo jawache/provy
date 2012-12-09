@@ -773,7 +773,7 @@ class Role(object):
         contents = self.read_remote_file(file_path).split('\n')
 
         for current_line in contents:
-            if line.replace(' ', '') == current_line.replace(' ', ''):
+            if line.replace(' ', '') == current_line.replace(' ', '').rstrip():
                 return True
         return False
 
